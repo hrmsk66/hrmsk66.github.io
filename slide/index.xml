@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slides on memo</title>
+    <link>https://hrmsk66.github.io/slide/</link>
+    <description>Recent content in Slides on memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 07 Mar 2020 23:03:25 +0900</lastBuildDate>
+    
+	<atom:link href="https://hrmsk66.github.io/slide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>スライドのテスト</title>
+      <link>https://hrmsk66.github.io/slide/2020/03/07/first/</link>
+      <pubDate>Sat, 07 Mar 2020 23:03:25 +0900</pubDate>
+      
+      <guid>https://hrmsk66.github.io/slide/2020/03/07/first/</guid>
+      <description>class: middle
+Hello World! fn main() { println!(&amp;#34;Hello World!&amp;#34;); } header2 header3 header4 plain paragraphふつうのパラグラフ
+???
+ノート
+ class: middle
+こんにちは世界。 fn main() { println!(&amp;#34;こんにちは世界。&amp;#34;); } </description>
+    </item>
+    
+  </channel>
+</rss>

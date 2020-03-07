@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on memo</title>
+    <link>https://hrmsk66.github.io/tags/hugo/</link>
+    <description>Recent content in hugo on memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 07 Mar 2020 23:09:34 +0900</lastBuildDate>
+    
+	<atom:link href="https://hrmsk66.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Github Pages &#43; Hugo &#43; remark.js セットアップメモ</title>
+      <link>https://hrmsk66.github.io/post/2020/03/07/about_hugo/</link>
+      <pubDate>Sat, 07 Mar 2020 23:09:34 +0900</pubDate>
+      
+      <guid>https://hrmsk66.github.io/post/2020/03/07/about_hugo/</guid>
+      <description>HUGO Install brew install hugo hugo new site memo cd memo 記事を作成。ローカルサーバを起動してどうレンダリングされるか確認しながら編集。
+hugo new post/helloworld.md --editor=&amp;quot;code&amp;quot; hugo server -D --watch Markdown 半角スペース x 2 で改行できる。&amp;lt;/br&amp;gt; と同じ。
+Theme Theme は Kiss を使用。
+hugoコマンドでビルド、public/をGithub PagesのリポジトリにPush。
+親ディレクトリでthemes/kissとpublic/をsubmoduleとして設定してPush。
+git init git submodule add git@github.com:ribice/kiss.git themes/kiss git submodule add git@github.com:hrmsk66/hrmsk66.github.io.git public Themeをカスタマイズしたくなったらlayout/やstatic/の下に同じ名前のファイルを置いてオーバライドする。
+theme/配下のファイルは編集しない。
+layouts/index.html 記事一覧のサマリを削除したかったのでこのパートを削除。
+ &amp;lt;div class=&amp;quot;content&amp;quot;&amp;gt; {{ .Summary | plainify | safeHTML }} {{ if .Truncated }} &amp;lt;a class=&amp;quot;button is-link&amp;quot; href=&amp;quot;{{ .Permalink }}&amp;quot; style=&amp;quot;height:28px&amp;quot;&amp;gt; Read more &amp;lt;/a&amp;gt; {{ end }} &amp;lt;/div&amp;gt; layouts/partials/nav.</description>
+    </item>
+    
+  </channel>
+</rss>
