@@ -7,15 +7,13 @@
 <title>Github Pages &#43; Hugo &#43; remark.js セットアップメモ | memo</title>
 
 <meta property='og:title' content='Github Pages &#43; Hugo &#43; remark.js セットアップメモ - memo'>
-<meta property='og:description' content='HUGO Install brew install hugo hugo new site memo cd memo 記事を作成。ローカルサーバを起動してどうレンダリングされるか確認しながら編集。
-hugo new post/helloworld.md --editor=&quot;code&quot; hugo server -D --watch Markdown 半角スペース x 2 で改行できる。&lt;/br&gt; と同じ。
-Theme Theme は Kiss を使用。
-hugoコマンドでビルド、public/をGithub PagesのリポジトリにPush。
-親ディレクトリでthemes/kissとpublic/をsubmoduleとして設定してPush。
-git init git submodule add git@github.com:ribice/kiss.git themes/kiss git submodule add git@github.com:hrmsk66/hrmsk66.github.io.git public Themeをカスタマイズしたくなったらlayout/やstatic/の下に同じ名前のファイルを置いてオーバライドする。
+<meta property='og:description' content='HUGO / Installと編集作業 brew install hugo hugo new site memo cd memo 記事を作成。ローカルサーバを起動してどうレンダリングされるか確認しながら編集。
+hugo new post/helloworld.md --editor=&quot;code&quot; hugo server -D --watch HUGO / Markdown 半角スペース x 2 で改行できる。&lt;/br&gt; と同じ。
+HUGO / Theme Theme は Kiss を使用。
+Themeをカスタマイズしたくなったらlayout/やstatic/の下に同じ名前のファイルを置いてオーバライドする。
 theme/配下のファイルは編集しない。
 layouts/index.html 記事一覧のサマリを削除したかったのでこのパートを削除。
- &lt;div class=&quot;content&quot;&gt; {{ .Summary | plainify | safeHTML }} {{ if .Truncated }} &lt;a class=&quot;button is-link&quot; href=&quot;{{ .Permalink }}&quot; style=&quot;height:28px&quot;&gt; Read more &lt;/a&gt; {{ end }} &lt;/div&gt; layouts/partials/nav.'>
+ &lt;div class=&quot;content&quot;&gt; {{ .Summary | plainify | safeHTML }} {{ if .Truncated }} &lt;a class=&quot;button is-link&quot; href=&quot;{{ .Permalink }}&quot; style=&quot;height:28px&quot;&gt; Read more &lt;/a&gt; {{ end }} &lt;/div&gt; layouts/partials/nav.html 右上にメニューを置いた。'>
 <meta property='og:url' content='https://hrmsk66.github.io/post/2020/03/07/about_hugo/'>
 <meta property='og:site_name' content='memo'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post'><meta property='article:tag' content='html'><meta property='article:tag' content='css'><meta property='article:tag' content='hugo'><meta property='article:published_time' content='2020-03-07T23:09:34&#43;09:00'/><meta property='article:modified_time' content='2020-03-07T23:09:34&#43;09:00'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@'><meta name='twitter:creator' content='@'>
@@ -91,24 +89,18 @@ layouts/index.html 記事一覧のサマリを削除したかったのでこの�
     <h1 class="title">Github Pages &#43; Hugo &#43; remark.js セットアップメモ</h1>
     
     <div class="content">
-      <h1 id="hugo">HUGO</h1>
-<h2 id="install">Install</h2>
+      <h2 id="hugo--installと編集作業">HUGO / Installと編集作業</h2>
 <pre><code>brew install hugo
 hugo new site memo
 cd memo
 </code></pre><p>記事を作成。ローカルサーバを起動してどうレンダリングされるか確認しながら編集。</p>
 <pre><code>hugo new post/helloworld.md --editor=&quot;code&quot;
 hugo server -D --watch
-</code></pre><h2 id="markdown">Markdown</h2>
+</code></pre><h2 id="hugo--markdown">HUGO / Markdown</h2>
 <p>半角スペース x 2 で改行できる。<code>&lt;/br&gt;</code> と同じ。</p>
-<h2 id="theme">Theme</h2>
-<p>Theme は <a href="https://github.com/ribice/kiss">Kiss</a> を使用。<br>
-<code>hugo</code>コマンドでビルド、<code>public/</code>をGithub PagesのリポジトリにPush。<br>
-親ディレクトリで<code>themes/kiss</code>と<code>public/</code>をsubmoduleとして設定してPush。</p>
-<pre><code>git init
-git submodule add git@github.com:ribice/kiss.git themes/kiss
-git submodule add git@github.com:hrmsk66/hrmsk66.github.io.git public
-</code></pre><p>Themeをカスタマイズしたくなったら<code>layout/</code>や<code>static/</code>の下に同じ名前のファイルを置いてオーバライドする。<br>
+<h2 id="hugo--theme">HUGO / Theme</h2>
+<p>Theme は <a href="https://github.com/ribice/kiss">Kiss</a> を使用。</p>
+<p>Themeをカスタマイズしたくなったら<code>layout/</code>や<code>static/</code>の下に同じ名前のファイルを置いてオーバライドする。<br>
 <code>theme/</code>配下のファイルは編集しない。</p>
 <h3 id="layoutsindexhtml">layouts/index.html</h3>
 <p>記事一覧のサマリを削除したかったのでこのパートを削除。</p>
@@ -139,7 +131,7 @@ git submodule add git@github.com:hrmsk66/hrmsk66.github.io.git public
 }
 </code></pre><h3 id="staticpng">static/*.png</h3>
 <p><a href="https://realfavicongenerator.net/">Favicon Generator</a>で作ったイメージ(favicon)を<code>/static</code>に配置。</p>
-<h2 id="configtoml">config.toml</h2>
+<h2 id="hugo--configtoml">HUGO / config.toml</h2>
 <p>コンテンツは記事とスライドの2種類。これを<code>menu.main</code>に追加。先述の<code>layouts/partials/nav.html</code>への変更によりHome右上に各コンテンツへのリンクが配置される。
 コンテンツのURLは日付+ファイル名とする。</p>
 <pre><code>baseURL = &quot;https://hrmsk66.github.io/&quot;
@@ -189,7 +181,7 @@ tag = &quot;tags&quot;
 [permalinks]
 post = &quot;/post/:year/:month/:day/:filename/&quot;
 slide = &quot;/slide/:year/:month/:day/:filename/&quot;
-</code></pre><h2 id="archetypes">archetypes</h2>
+</code></pre><h2 id="hugo--archetypes">HUGO / archetypes</h2>
 <h3 id="archetypespostmd">archetypes/post.md</h3>
 <pre><code>---
 title: &quot;{{ replace .Name &quot;-&quot; &quot; &quot; | title }}&quot;
@@ -206,7 +198,7 @@ draft: true
 categories: [&quot;post&quot;]
 tags: [&quot;&quot;, &quot;&quot;]
 ---
-</code></pre><h2 id="複数テンプレートを使い分ける">複数テンプレートを使い分ける</h2>
+</code></pre><h2 id="hugo--複数テンプレートを使い分ける">HUGO / 複数テンプレートを使い分ける</h2>
 <p><code>/post</code> のコンテンツには記事用のレイアウト、<code>/slide</code> のコンテンツにはスライド用のレイアウトを適用したい。
 とりあえず<code>layouts/slide/single.html</code>を配置。スライドモードになるともとのページに戻れないのが不便なのでおいおい何とかしたい。</p>
 <pre><code>&lt;html&gt;
@@ -229,7 +221,7 @@ tags: [&quot;&quot;, &quot;&quot;]
 <li><a href="https://discourse.gohugo.io/t/my-experiences-with-hugos-template-lookup-order/9959">My experiences with Hugo’s template lookup order</a></li>
 </ul>
 <hr>
-<h1 id="remarkjs">remark.js</h1>
+<h2 id="hugo--remarkjs">HUGO + remark.js</h2>
 <p><a href="https://github.com/gnab/remark/wiki">https://github.com/gnab/remark/wiki</a></p>
 <p>縦横比を16:9に変更。</p>
 <pre><code>&lt;script&gt;
@@ -243,10 +235,13 @@ tags: [&quot;&quot;, &quot;&quot;]
 <pre><code>&lt;script src=&quot;https://gnab.github.io/remark/downloads/remark-latest.min.js&quot;&gt;&lt;/script&gt;
 </code></pre><p>ページをクローンすることで自分はカンペ付きの発表者用ページを、オーディエンスには通常スライドを表示することができる。
 <code>Shift + C</code>でスライド画面のクローンを作成、<code>Shift + P</code> で発表者用画面を表示。</p>
-<h1 id="github-actions">Github Actions</h1>
-<p>親ディレクトリと<code>public/</code>を別々に管理するのがつらい。時間のあるときにGithub Actionsを試したい。<br>
-<a href="https://qiita.com/peaceiris/items/d401f2e5724fdcb0759d">GitHub Actions による GitHub Pages への自動デプロイ</a><br>
-現状のアップデートフロー</p>
+<h2 id="hugo--build">HUGO / Build</h2>
+<p><code>hugo</code>コマンドでビルド、<code>public/</code>をGithub PagesのリポジトリにPush。<br>
+親ディレクトリで<code>themes/kiss</code>と<code>public/</code>をsubmoduleとして設定してPush。</p>
+<pre><code>git init
+git submodule add git@github.com:ribice/kiss.git themes/kiss
+git submodule add git@github.com:hrmsk66/hrmsk66.github.io.git public
+</code></pre><p>現状のアップデートフロー。面倒。</p>
 <pre><code>hugo
 cd public
 git add .
@@ -257,7 +252,10 @@ git submodule update public
 git add .
 git commit -m 'update content'
 git push -u origin master
-</code></pre>
+</code></pre><h1 id="github-actions">Github Actions</h1>
+<p>親ディレクトリと<code>public/</code>を別々に管理するのがつらい。時間のあるときにGithub Actionsを試したい。<br>
+<a href="https://qiita.com/peaceiris/items/d401f2e5724fdcb0759d">GitHub Actions による GitHub Pages への自動デプロイ</a></p>
+
       
       <div class="related">
 </div>

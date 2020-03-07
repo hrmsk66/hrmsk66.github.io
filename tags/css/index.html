@@ -85,15 +85,13 @@
       <h2 class="subtitle is-6 date">March 7, 2020</h2>
       <h1 class="title"><a href="https://hrmsk66.github.io/post/2020/03/07/about_hugo/">Github Pages &#43; Hugo &#43; remark.js セットアップメモ</a></h1>
       <div class="content">
-        HUGO Install brew install hugo hugo new site memo cd memo 記事を作成。ローカルサーバを起動してどうレンダリングされるか確認しながら編集。
-hugo new post/helloworld.md --editor=&quot;code&quot; hugo server -D --watch Markdown 半角スペース x 2 で改行できる。&lt;/br&gt; と同じ。
-Theme Theme は Kiss を使用。
-hugoコマンドでビルド、public/をGithub PagesのリポジトリにPush。
-親ディレクトリでthemes/kissとpublic/をsubmoduleとして設定してPush。
-git init git submodule add git@github.com:ribice/kiss.git themes/kiss git submodule add git@github.com:hrmsk66/hrmsk66.github.io.git public Themeをカスタマイズしたくなったらlayout/やstatic/の下に同じ名前のファイルを置いてオーバライドする。
+        HUGO / Installと編集作業 brew install hugo hugo new site memo cd memo 記事を作成。ローカルサーバを起動してどうレンダリングされるか確認しながら編集。
+hugo new post/helloworld.md --editor=&quot;code&quot; hugo server -D --watch HUGO / Markdown 半角スペース x 2 で改行できる。&lt;/br&gt; と同じ。
+HUGO / Theme Theme は Kiss を使用。
+Themeをカスタマイズしたくなったらlayout/やstatic/の下に同じ名前のファイルを置いてオーバライドする。
 theme/配下のファイルは編集しない。
 layouts/index.html 記事一覧のサマリを削除したかったのでこのパートを削除。
- &lt;div class=&quot;content&quot;&gt; {{ .Summary | plainify | safeHTML }} {{ if .Truncated }} &lt;a class=&quot;button is-link&quot; href=&quot;{{ .Permalink }}&quot; style=&quot;height:28px&quot;&gt; Read more &lt;/a&gt; {{ end }} &lt;/div&gt; layouts/partials/nav.
+ &lt;div class=&quot;content&quot;&gt; {{ .Summary | plainify | safeHTML }} {{ if .Truncated }} &lt;a class=&quot;button is-link&quot; href=&quot;{{ .Permalink }}&quot; style=&quot;height:28px&quot;&gt; Read more &lt;/a&gt; {{ end }} &lt;/div&gt; layouts/partials/nav.html 右上にメニューを置いた。
         
         <a class="button is-link" href="https://hrmsk66.github.io/post/2020/03/07/about_hugo/" style="height:28px">
           Read more
