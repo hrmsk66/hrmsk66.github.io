@@ -10,7 +10,7 @@
 <meta property='og:description' content=''>
 <meta property='og:url' content='https://hrmsk66.github.io/tags/rust/'>
 <meta property='og:site_name' content='memo'>
-<meta property='og:type' content='website'><meta property='article:section' content='Tags'><meta property='og:updated_time' content='2020-03-07T23:09:34&#43;09:00'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@'><meta name='twitter:creator' content='@'>
+<meta property='og:type' content='website'><meta property='article:section' content='Tags'><meta property='og:updated_time' content='2020-03-09T11:24:31&#43;09:00'/><meta name='twitter:card' content='summary'><meta name='twitter:site' content='@'><meta name='twitter:creator' content='@'>
 
 
 <link rel="stylesheet" href="/css/style.css"/><link rel='stylesheet' href='https://hrmsk66.github.io/css/custom.css'><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -76,15 +76,13 @@
 
         
       </div>
-      <h2 class="subtitle is-6 date">March 7, 2020</h2>
-      <h1 class="title"><a href="https://hrmsk66.github.io/slide/2020/03/07/first/">スライドのテスト</a></h1>
+      <h2 class="subtitle is-6 date">March 9, 2020</h2>
+      <h1 class="title"><a href="https://hrmsk66.github.io/post/2020/03/09/print_typename/">Typeを知る</a></h1>
       <div class="content">
-        class: middle
-Hello World! fn main() { println!(&#34;Hello World!&#34;); } header2 header3 header4 plain paragraphふつうのパラグラフ
-???
-ノート
- class: middle
-こんにちは世界。 fn main() { println!(&#34;こんにちは世界。&#34;); } 
+        1.38.0から追加されたstd::any::type_name()で型を調べることができる。
+Method chainingしてると扱っている型がなんだか分からなくなりがちなのでこういうのがあると助かる。
+https://doc.rust-lang.org/std/any/fn.type_name.html
+fn print_type_name&lt;T&gt;(_val: T) { println!(&quot;{}&quot;, std::any::type_name::&lt;T&gt;()); } fn main() { let hello = &quot;こんにちは&quot;; let world = &quot;世界&quot;.to_string(); print_type_name(hello); // prints &amp;str print_type_name(world.clone()); // prints alloc::string::String print_type_name(&amp;world); // prints &amp;alloc::string::String } 
         
       </div>
     </article>

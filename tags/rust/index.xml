@@ -6,23 +6,21 @@
     <description>Recent content in rust on memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 07 Mar 2020 23:03:25 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 09 Mar 2020 11:24:31 +0900</lastBuildDate>
     
 	<atom:link href="https://hrmsk66.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>スライドのテスト</title>
-      <link>https://hrmsk66.github.io/slide/2020/03/07/first/</link>
-      <pubDate>Sat, 07 Mar 2020 23:03:25 +0900</pubDate>
+      <title>Typeを知る</title>
+      <link>https://hrmsk66.github.io/post/2020/03/09/print_typename/</link>
+      <pubDate>Mon, 09 Mar 2020 11:24:31 +0900</pubDate>
       
-      <guid>https://hrmsk66.github.io/slide/2020/03/07/first/</guid>
-      <description>class: middle
-Hello World! fn main() { println!(&amp;#34;Hello World!&amp;#34;); } header2 header3 header4 plain paragraphふつうのパラグラフ
-???
-ノート
- class: middle
-こんにちは世界。 fn main() { println!(&amp;#34;こんにちは世界。&amp;#34;); } </description>
+      <guid>https://hrmsk66.github.io/post/2020/03/09/print_typename/</guid>
+      <description>1.38.0から追加されたstd::any::type_name()で型を調べることができる。
+Method chainingしてると扱っている型がなんだか分からなくなりがちなのでこういうのがあると助かる。
+https://doc.rust-lang.org/std/any/fn.type_name.html
+fn print_type_name&amp;lt;T&amp;gt;(_val: T) { println!(&amp;quot;{}&amp;quot;, std::any::type_name::&amp;lt;T&amp;gt;()); } fn main() { let hello = &amp;quot;こんにちは&amp;quot;; let world = &amp;quot;世界&amp;quot;.to_string(); print_type_name(hello); // prints &amp;amp;str print_type_name(world.clone()); // prints alloc::string::String print_type_name(&amp;amp;world); // prints &amp;amp;alloc::string::String } </description>
     </item>
     
   </channel>
